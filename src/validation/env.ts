@@ -21,6 +21,7 @@ const EnvSchema = z.object({
   PORT: z.coerce.number().default(9999),
   LOG_LEVEL: z.enum(["fatal", "error", "warn", "info", "debug", "trace", "silent"]),
   DATABASE_URL: z.string().url(),
+  NEXT_PUBLIC_URL: z.string().url(),
   BETTER_AUTH_SECRET: z.string(),
   Google_Client_ID: z.string(),
   Google_Client_Secret: z.string(),
