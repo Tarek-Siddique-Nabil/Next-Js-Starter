@@ -3,7 +3,9 @@
     "next/core-web-vitals",
     "next/typescript",
     "prettier",
-    "plugin:drizzle/recommended"
+    "plugin:drizzle/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,9 +23,8 @@
     "**/migrations/*"
   ],
   "rules": {
-    "no-console": [
-      "warn"
-    ],
+   "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+   "tailwindcss/classnames-order": "error",
     "node/prefer-global/process": [
       "off"
     ],
@@ -58,5 +59,11 @@
         "src/**/!^[.*": "KEBAB_CASE"
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    } 
+  ]
 }

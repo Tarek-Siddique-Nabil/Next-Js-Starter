@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "expo.vscode-expo-tools",
+      "esbenp.prettier-vscode",
+      "yoavbls.pretty-ts-errors",
+      "bradlc.vscode-tailwindcss",
+      "rvest.vs-code-prettier-eslint"
+    ]
+  }
