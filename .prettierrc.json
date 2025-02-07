@@ -5,20 +5,9 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "importOrder": [
-    "^(react/(.*)$)|^(react$)",
-    "^(next/(.*)$)|^(next$)",
+    "^(react|next?/?([a-zA-Z/]*))$",
     "<THIRD_PARTY_MODULES>",
-    "",
-    "^types$",
-    "^@/types/(.*)$",
-    "^@/config/(.*)$",
-    "^@/lib/(.*)$",
-    "^@/hooks/(.*)$",
-    "^@/components/ui/(.*)$",
-    "^@/components/(.*)$",
-    "^@/styles/(.*)$",
-    "^@/app/(.*)$",
-    "",
+    "^@/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
@@ -26,6 +15,5 @@
   "plugins": [
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
-  ],
-  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"]
+  ]
 }

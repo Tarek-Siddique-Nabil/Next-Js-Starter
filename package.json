@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --write .",
+    "format": "prettier src/ --write",
     "format:check": "prettier --check .",
     "db:generate": "drizzle-kit generate:pg",
     "db:migrate": "cross-env DB_MIGRATING=true tsx src/db/migrate.ts",

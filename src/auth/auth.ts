@@ -1,22 +1,23 @@
-import db from "@/db";
-import env from "@/validation/env";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { openAPI } from "better-auth/plugins";
-export const auth = betterAuth({
-    database: drizzleAdapter(db, {
-        provider: "pg", 
-      }),
 
+import db from "@/db";
+import env from "@/validation/env";
+
+export const auth = betterAuth({
+  database: drizzleAdapter(db, {
+    provider: "pg",
+  }),
 
   emailAndPassword: {
     enabled: true,
   },
-  session:{
-    cookieCache:{
-        enabled: true,
-        maxAge: 5 * 60 ,
-    }
+  session: {
+    cookieCache: {
+      enabled: true,
+      maxAge: 5 * 60,
+    },
   },
   socialProviders: {
     google: {
@@ -24,9 +25,7 @@ export const auth = betterAuth({
       clientSecret: env.Google_Client_Secret!,
     },
   },
-  plugins: [
-    openAPI(),
-  ],
+  plugins: [openAPI()],
 });
 
 export type Session = typeof auth.$Infer.Session;
