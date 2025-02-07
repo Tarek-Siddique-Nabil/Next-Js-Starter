@@ -4,46 +4,23 @@
     "next/typescript",
     "prettier",
     "plugin:drizzle/recommended",
-    "plugin:tailwindcss/recommended",
     "plugin:tailwindcss/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "check-file",
-    "n",
-    "drizzle"
-  ],
-  "ignorePatterns": [
-    "node_modules/",
-    ".next/",
-    "out/",
-    "**/migrations/*"
-  ],
+  "plugins": ["check-file", "n", "drizzle"],
+  "ignorePatterns": ["node_modules/", ".next/", "out/", "**/migrations/*"],
   "rules": {
-   "no-console": ["error", { "allow": ["info", "warn", "error"] }],
-   "tailwindcss/classnames-order": "error",
-    "node/prefer-global/process": [
-      "off"
-    ],
-    "prefer-arrow-callback": [
-      "error"
-    ],
-    "prefer-template": [
-      "error"
-    ],
-    "semi": [
-      "error"
-    ],
-    "quotes": [
-      "error",
-      "double"
-    ],
-    "n/no-process-env": [
-      "error"
-    ],
+    "no-console": ["error", { "allow": ["info", "warn", "error"] }],
+    "tailwindcss/classnames-order": "error",
+    "node/prefer-global/process": ["off"],
+    "prefer-arrow-callback": ["error"],
+    "prefer-template": ["error"],
+    "semi": ["error"],
+    "quotes": ["error", "double"],
+    "n/no-process-env": ["error"],
     "check-file/filename-naming-convention": [
       "error",
       {
@@ -64,6 +41,6 @@
     {
       "files": ["*.ts", "*.tsx", "*.js"],
       "parser": "@typescript-eslint/parser"
-    } 
+    }
   ]
 }
