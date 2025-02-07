@@ -4,17 +4,13 @@ import { handle } from "hono/vercel";
 import { auth } from "@/auth/auth";
 import configureOpenAPI from "@/lib/configure-open-api";
 import createApp from "@/lib/create-app";
+import { registerRoutes } from "@/lib/routes";
 import env from "@/validation/env";
 
 export const runtime = "nodejs";
 
-const app = createApp().basePath("/api");
+const app = registerRoutes(createApp());
 configureOpenAPI(app);
-
-const routes = [] as const;
-routes.forEach((route) => {
-  app.route("/", route);
-});
 
 app.use(
   "*", // or replace with "*" to enable cors for all routes
@@ -44,7 +40,6 @@ app.get("/session", async (c) => {
   });
 });
 
-export type AppType = (typeof routes)[number];
 export const GET = handle(app);
 export const POST = handle(app);
 export const PUT = handle(app);

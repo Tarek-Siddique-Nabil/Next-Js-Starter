@@ -9,6 +9,13 @@ export interface AppBindings {
   };
 }
 
+export type AppEnv = {
+  Bindings: {
+    AUTH_SECRET: string;
+    GITHUB_CLIENT_ID: string;
+    GITHUB_CLIENT_SECRET: string;
+  };
+};
 export type AppOpenAPI = OpenAPIHono<AppBindings>;
 
 export type AppRouteHandler<R extends RouteConfig> = RouteHandler<

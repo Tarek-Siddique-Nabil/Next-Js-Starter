@@ -4,10 +4,10 @@ import { defaultHook } from "stoker/openapi";
 
 import authMiddleware from "@/auth/auth-middleware";
 
-import type { AppBindings } from "./types";
+import type { AppBindings, AppEnv, AppOpenAPI } from "./types";
 
 export function createRouter() {
-  return new OpenAPIHono<AppBindings>({
+  return new OpenAPIHono<AppBindings, AppEnv>({
     strict: false,
     defaultHook,
   });
@@ -22,6 +22,6 @@ export default function createApp() {
   return app;
 }
 
-// export function createTestApp<R extends AppOpenAPI>(router: R) {
-//   return createApp().route("/", router);
-// }
+export function createTestApp<R extends AppOpenAPI>(router: R) {
+  return createApp().route("/", router);
+}

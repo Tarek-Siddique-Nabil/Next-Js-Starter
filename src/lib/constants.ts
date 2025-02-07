@@ -1,6 +1,7 @@
 import * as HttpStatusPhrases from "stoker/http-status-phrases";
 import { createMessageObjectSchema } from "stoker/openapi/schemas";
 
+export const BASE_PATH = "/api";
 export const ZOD_ERROR_MESSAGES = {
   REQUIRED: "Required",
   EXPECTED_NUMBER: "Expected number, received nan",
