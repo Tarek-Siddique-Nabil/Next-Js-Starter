@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { geistMono, geistSans } from "@/lib/font";
+import { exo_2, inter } from "@/lib/font";
 
 import "./globals.css";
 
@@ -16,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${exo_2.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
