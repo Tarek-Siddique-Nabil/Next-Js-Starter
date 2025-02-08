@@ -1,4 +1,10 @@
-export { default as todo } from "./todo.schema";
+export {
+  insertTodoSchema,
+  patchTodoSchema,
+  selectTodosSchema,
+  default as todo,
+  todoRelations,
+} from "./todo.schema";
 export {
   account,
   accountRelations,
