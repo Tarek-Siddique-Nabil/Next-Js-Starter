@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Toaster } from "@/components/ui/sonner";
 import { exo_2, inter } from "@/lib/font";
 import { ThemeProvider } from "@/providers/theme-provider";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`${exo_2.variable} ${inter.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
+          <Toaster richColors duration={1500} />
         </ThemeProvider>
       </body>
     </html>
