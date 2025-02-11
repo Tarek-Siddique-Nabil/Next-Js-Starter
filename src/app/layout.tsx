@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { exo_2, inter } from "@/lib/font";
+import { ThemeProvider } from "@/provider/theme-provider";
 
 import "./globals.css";
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${exo_2.variable} ${inter.variable} antialiased`}>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
