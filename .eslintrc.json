@@ -11,7 +11,13 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["check-file", "n", "drizzle"],
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "**/migrations/*"],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "**/migrations/*",
+    "lucide-react.d.ts"
+  ],
   "rules": {
     "no-console": ["error", { "allow": ["info", "warn", "error"] }],
     "tailwindcss/classnames-order": "error",
