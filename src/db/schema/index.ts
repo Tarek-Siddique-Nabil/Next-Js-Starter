@@ -1,4 +1,4 @@
-export { default as todo } from "./todo.schema";
+export { default as todo, todoRelations } from "./todo.schema";
 export {
   account,
   accountRelations,

@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${exo_2.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${exo_2.variable} ${inter.variable} container mx-auto px-8 pt-6 antialiased lg:pt-10`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
