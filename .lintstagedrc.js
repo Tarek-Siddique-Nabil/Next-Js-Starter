@@ -2,7 +2,7 @@ const path = require("path");
 
 const buildEslintCommand = (filenames) =>
   `next lint --fix --file ${filenames
-    .map((f) => path.relative(process.cwd(), f))
+    .map((f) => JSON.stringify(path.relative(process.cwd(), f)))
     .join(" --file ")}`;
 
 const prettierCommand = "prettier --write";
