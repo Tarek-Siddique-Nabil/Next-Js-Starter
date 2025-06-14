@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 import { exo_2, inter } from "@/lib/font";
-import { ThemeProvider } from "@/provider/theme-provider";
+import Providers from "@/provider/provider";
+import "@/utils/orpc/orpc.server";
 
 import "./globals.css";
 
@@ -18,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${exo_2.variable} ${inter.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
